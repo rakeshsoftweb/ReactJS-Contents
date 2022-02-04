@@ -1,0 +1,16 @@
+Make add, update, delete , list on Employee model
+employee details here
+empid : number
+empname :string 
+salary :number
+
+display grade according to salary amount
+please find details 
+display grade in alphabet (d,c,b,a)
+please do color coding 
+ex. if grade d background color should yellow
+
+d : 50000 : yellow
+c : 50000 to 1 lakh : blue
+b  1lkah to 2lakh : Green
+a  2 lkah to 5lakh +  : Red

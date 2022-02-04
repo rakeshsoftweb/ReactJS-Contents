@@ -1,0 +1,9 @@
+1. build a sign up form
+	field name email
+	field name password 
+	submit button
+2. Build component to show notification
+3. if email and password is empty then notify warning message with red background
+4. if password is less then 6 character please how warning message
+5. in case of success please show success full message with green backgound
+
