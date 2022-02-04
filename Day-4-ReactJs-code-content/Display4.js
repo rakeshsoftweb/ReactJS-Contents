@@ -25,7 +25,7 @@ class Display4 extends Component {
         return(
             <>
                <div className='form-group'>
-               {/* <h1>{FullName}</h1> */}
+               <h1>{FullName}</h1>
                <Displayhdr fullname={FullName} address ={address} />
                <label>Full Name : </label>
                 <input type="text" className='form-control' name="FullName" value={FullName} onChange={this.onInputChange}/>

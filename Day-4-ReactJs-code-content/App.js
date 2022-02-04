@@ -1,12 +1,11 @@
 import React from 'react';
-// import Display from './Display';
-import Display4 from './Display4';
+import Display7 from './Display7';
+
 function App() {
-  // const Displaytitle = "this is Display title";
   return (
     <>
-      {/* <Display title={Displaytitle} amount="245"/> */}
-    <Display4/>
+    {/* Hellow */}
+      <Display7/>
     </>
   );
 }
