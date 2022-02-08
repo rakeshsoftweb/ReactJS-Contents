@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Display extends Component {
     constructor() {
         super();
-        this.state = {cStatus:false, cLocal:false,cCentral:false, Customer: { customercode: '', customername: '', status: '', custtype: '' }, CustomerData: [], CData:[]};
+        this.state = {editIndex :-1,cStatus:false, cLocal:false,cCentral:false, Customer: { customercode: '', customername: '', status: '', custtype: '' }, CustomerData: [], CData:[]};
     }
     onChangeHandler = (e) => {
         console.log("change ", e.target);
@@ -24,13 +24,19 @@ class Display extends Component {
     }
     onSubmit = (e) => {
         e.preventDefault();
-        let { CustomerData, Customer } = this.state;
-        CustomerData.push(Customer);
+        let { CustomerData, Customer, editIndex } = this.state;
+        if(editIndex>=0)
+        {
+            CustomerData[editIndex] = Customer;
+        } else {
+            
+            CustomerData.push(Customer);
+        }        
         this.setState({CustomerData, cStatus:false});        
         this.setState({CData:CustomerData});
         Customer = { customercode: '', customername: '', status: '', custtype: '' };
         this.setState({Customer});
-        this.setState({cLocal:false,cCentral:false});
+        this.setState({cLocal:false,cCentral:false, editIndex:-1});
     }
     onDelete = (DeleteIndex)=>{
         let  { CData } = this.state;
@@ -39,7 +45,8 @@ class Display extends Component {
     }
     onEdit = (item, index)=>{
         console.log("Item ", item);
-        let  { Customer, cStatus, cLocal, cCentral } = this.state;
+        let  { Customer, cStatus, cLocal, cCentral, editIndex } = this.state;
+        editIndex = index;
         Customer.customercode = item.customercode;
         Customer.customername = item.customername;
         Customer.status = item.status;
@@ -55,7 +62,8 @@ class Display extends Component {
             cCentral = true;
             cLocal = false;
         }
-        this.setState({Customer, cStatus, cLocal, cCentral});
+        this.setState({Customer, cStatus, cLocal, cCentral, editIndex});
+
     }
     render() {
         let { Customer, cStatus, CData, cLocal, cCentral } = this.state;
