@@ -1,0 +1,40 @@
+Project HRMS
+module 
+Employee Management (2 model)
+Payroll + attednace + salary
+Training 
+requirement management
+Leave Management
+
+model example
+Employee 
+
+Employee ID (entity)
+Employee Name (entity)
+Basic (entity)
+HRA (entity)
+CA (entity)
+VDA (entity)
+
+Employee Family details
+
+
+json-server - build fake api to test our application  - api can be build using  language (java or asp.net mvc or python flask or php or .....)
+json  files (2 model ) we need to create a json file for our json server 
+ some of database name here mysql or sqlserver or mongodb
+api url 
+
+at command prompt  type below command to install json-server 
+
+npm install -g json-server
+
+to install axios 
+below command at command prompt 
+
+npm i axios --save
+
+
+
+
+
+
