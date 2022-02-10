@@ -1,0 +1,6 @@
+on UpdateEmployee Conponent 
+Add a drop down list
+bind id with value property
+display employee name in drop down
+on change on drop down form should be filled
+after submit button it must be saved in api

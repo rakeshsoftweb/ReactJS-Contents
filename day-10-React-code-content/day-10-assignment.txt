@@ -1,0 +1,11 @@
+create a api 
+build a React Component 
+Component 1 : Add a vendor
+Component 2 : Update a vendor
+Component 3 : Delete  a vendor
+Component 4 : List  a vendor
+===================
+id:1
+vendorname
+contactno
+type : true
